@@ -1,0 +1,14 @@
+options(warn=-1)
+library(caret)
+library(randomForest)
+library(Hmisc)
+
+library(foreach)
+library(doParallel)
+set.seed(4356)
+
+url <- "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv"
+download.file(url,'D:/temp/training.csv')
+data <- read.csv('D:/temp/training.csv')
+head(data)
+summary(data)
